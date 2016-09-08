@@ -32,7 +32,7 @@ project "cURL"
 
         defines {  }
 
-        local downloadPem = zpm.build._currentExportPath .. "cacert.pem"
+        local downloadPem = path.join(zpm.build._currentExportPath, "cacert.pem")
         print(downloadPem)
         -- find the location of the ca bundle
         local ca = nil
