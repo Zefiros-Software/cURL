@@ -30,8 +30,6 @@ project "cURL"
             --"CURLOPT_SSL_VERIFYPEER=0"
         }
 
-        defines {  }
-
         local downloadPem = path.join(zpm.build._currentExportPath, "cacert.pem")
         -- find the location of the ca bundle
         local ca = nil
@@ -43,12 +41,12 @@ project "cURL"
             "/usr/local/share/certs/ca-root.crt",
             "/etc/ssl/cert.pem" } do
             if os.isfile(f) then
-        print(f)
                 ca = f
                 break
             end
         end
         if ca then
+        print(ca)
             defines { 
                 'CURL_CA_BUNDLE="' .. ca .. '"' 
             }
