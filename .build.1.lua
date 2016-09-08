@@ -33,17 +33,17 @@ project "cURL"
         defines {  }
 
         local downloadPem = path.join(zpm.build._currentExportPath, "cacert.pem")
-        print(downloadPem)
         -- find the location of the ca bundle
         local ca = nil
-        for _, f in ipairs {
+        for _, f in ipairs {,
+             downloadPem,
             "/etc/ssl/certs/ca-certificates.crt",
             "/etc/pki/tls/certs/ca-bundle.crt",
             "/usr/share/ssl/certs/ca-bundle.crt",
             "/usr/local/share/certs/ca-root.crt",
-            "/etc/ssl/cert.pem",
-             downloadPem } do
+            "/etc/ssl/cert.pem" } do
             if os.isfile(f) then
+        print(f)
                 ca = f
                 break
             end
