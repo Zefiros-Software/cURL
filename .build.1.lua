@@ -35,7 +35,7 @@ project "cURL"
         local downloadPem = path.join(zpm.build._currentExportPath, "cacert.pem")
         -- find the location of the ca bundle
         local ca = nil
-        for _, f in ipairs {,
+        for _, f in ipairs {
              downloadPem,
             "/etc/ssl/certs/ca-certificates.crt",
             "/etc/pki/tls/certs/ca-bundle.crt",
