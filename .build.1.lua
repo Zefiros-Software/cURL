@@ -25,8 +25,7 @@ project "cURL"
             "BUILDING_LIBCURL",
             "CURL_STATICLIB",
             "HTTP_ONLY", 
-            "USE_MBEDTLS",
-            "CURLOPT_SSL_VERIFYPEER=0"
+            "USE_MBEDTLS"
         }
 
     end)
