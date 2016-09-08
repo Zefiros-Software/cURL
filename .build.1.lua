@@ -8,10 +8,13 @@ project "cURL"
         "Zefiros-Software/mbedTLS"
     }
 
+    includedirs { 
+        "lib"
+    }
+
     zpm.export(function()
         includedirs { 
-            "include", 
-            "lib"
+            "include"
         }
 
         defines { 
