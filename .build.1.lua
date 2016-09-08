@@ -33,7 +33,7 @@ project "cURL"
 
         filter {"system:windows"}
             defines { 
-                'CURL_CA_BUNDLE="%__APPDIR__%/cacert.pem"'
+                'CURL_CA_BUNDLE="%%__APPDIR__%%/cacert.pem"'
             }
 
         filter {"system:not windows"}
