@@ -1,4 +1,5 @@
 {
+    "postextract": "curl.lua",
     "requires": [
 		{
 			"name": "Zefiros-Software/mbedTLS",
