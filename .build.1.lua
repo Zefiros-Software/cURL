@@ -2,7 +2,6 @@
 project "cURL"
 
     kind "StaticLib"
-    language "C"
 
     zpm.uses {
         "Zefiros-Software/mbedTLS"
@@ -14,7 +13,7 @@ project "cURL"
 
     files {
         "**.h",
-        "**.c"
+        "lib/**.c"
     }
 
     zpm.export(function()
