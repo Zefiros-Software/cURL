@@ -16,6 +16,7 @@ project "cURL"
         "src/**.c"
     }
 
+    local downloadPem = path.join(zpm.build._currentExportPath, "cacert.pem")
     zpm.export(function()
         includedirs { 
             "include"
@@ -29,8 +30,6 @@ project "cURL"
             "CURL_HIDDEN_SYMBOLS"
             --"CURLOPT_SSL_VERIFYPEER=0"
         }
-
-        local downloadPem = path.join(zpm.build._currentExportPath, "cacert.pem")
         -- find the location of the ca bundle
         local ca = nil
         for _, f in ipairs {
