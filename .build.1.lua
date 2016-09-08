@@ -12,7 +12,8 @@ project "cURL"
     }
 
     files {
-        "lib/**.c"
+        "lib/**.c",
+        "src/**.c"
     }
 
     zpm.export(function()
