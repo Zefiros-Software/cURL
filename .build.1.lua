@@ -17,9 +17,6 @@ project "cURL"
     }
 
     local downloadPem = path.join(zpm.build._currentExportPath, "cacert.pem")
-    postbuildcommands { 
-        "{COPY} ".. downloadPem .." %{path.getabsolute(cfg.targetdir)}/cacert.pem" 
-    }
 
     zpm.export(function()
         includedirs { 
@@ -32,7 +29,7 @@ project "cURL"
             "HTTP_ONLY", 
             "USE_MBEDTLS",
             "CURL_HIDDEN_SYMBOLS",
-            "./cacert.pem"
+            'CURL_CA_BUNDLE="./cacert.pem"'
         }
 
     end)
