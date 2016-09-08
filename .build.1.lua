@@ -24,7 +24,6 @@ project "cURL"
         defines { 
             "BUILDING_LIBCURL",
             "CURL_STATICLIB",
-            "HTTP_ONLY", 
             "USE_MBEDTLS" 
         }
 
