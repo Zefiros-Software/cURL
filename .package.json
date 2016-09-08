@@ -1,4 +1,5 @@
 {
+    "name": "Zefiros-Software/cURL",
     "postextract": "curl.lua",
     "requires": [
 		{
