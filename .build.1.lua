@@ -12,6 +12,11 @@ project "cURL"
         "lib"
     }
 
+    files {
+        "**.h",
+        "**.c"
+    }
+
     zpm.export(function()
         includedirs { 
             "include"
@@ -45,10 +50,6 @@ project "cURL"
                     'CURL_CA_BUNDLE="' .. ca .. '"' 
                 }
             end
+
+        filter {}
     end)
-
-    files {
-        "**.h",
-        "**.c"
-    }
-
