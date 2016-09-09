@@ -8,7 +8,7 @@ end
 
 if os.isfile( zpm.build._currentExportPath .. "/lib/curl_config.h" ) == false then
     if os.is( "linux" ) then
-
+        print(zpm.build._currentDependency.dependencyPath .. "/config/config-linux.h")
         zpm.assert( os.copyfile( zpm.build._currentDependency.dependencyPath .. "/config/config-linux.h", zpm.build._currentExportPath .. "/lib/curl_config.h") )
 
     end
