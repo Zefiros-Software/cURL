@@ -10,7 +10,7 @@ project "cURL"
     files {
         "lib/**.c"
     }
-    
+
     includedirs { 
         "lib"
     }
@@ -26,7 +26,11 @@ project "cURL"
             "HTTP_ONLY", 
             "USE_MBEDTLS",
             "CURL_HIDDEN_SYMBOLS",
-            "HAVE_CONFIG_H"
         }
+
+        filter {"system:not windows"}
+            defines "HAVE_CONFIG_H"
+        
+        filter {}
 
     end)
