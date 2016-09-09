@@ -10,6 +10,10 @@ project "cURL"
     files {
         "lib/**.c"
     }
+    
+    includedirs { 
+        "lib"
+    }
 
     zpm.export(function()
         includedirs { 
