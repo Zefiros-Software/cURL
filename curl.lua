@@ -9,11 +9,8 @@ end
 if os.isfile( zpm.build._currentExportPath .. "/lib/curl_config.h" ) == false then
     if os.is( "linux" ) then
         zpm.assert( os.copyfile( zpm.build._currentDependency.buildPath .. "/config/config-linux.h", zpm.build._currentExportPath .. "/lib/curl_config.h") )
-
     end
     if os.is( "macosx" ) then
-
         zpm.assert( os.copyfile( zpm.build._currentDependency.buildPath .. "/config/config-osx.h", zpm.build._currentExportPath .. "/lib/curl_config.h") )
-
     end
 end
