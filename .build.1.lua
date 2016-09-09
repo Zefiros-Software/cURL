@@ -7,10 +7,6 @@ project "cURL"
         "Zefiros-Software/mbedTLS"
     }
 
-    includedirs { 
-        "lib"
-    }
-
     files {
         "lib/**.c",
         "src/**.c"
