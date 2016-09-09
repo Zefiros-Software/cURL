@@ -20,7 +20,8 @@ project "cURL"
             "BUILDING_LIBCURL",
             "CURL_STATICLIB",
             "HTTP_ONLY", 
-            "USE_MBEDTLS"
+            "USE_MBEDTLS",
+            "CURL_HIDDEN_SYMBOLS"
         }
 
     end)
