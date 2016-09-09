@@ -21,7 +21,8 @@ project "cURL"
             "CURL_STATICLIB",
             "HTTP_ONLY", 
             "USE_MBEDTLS",
-            "CURL_HIDDEN_SYMBOLS"
+            "CURL_HIDDEN_SYMBOLS",
+            "HAVE_CONFIG_H"
         }
 
     end)
