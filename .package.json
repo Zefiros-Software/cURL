@@ -4,7 +4,7 @@
     "requires": [
 		{
 			"name": "Zefiros-Software/mbedTLS",
-			"version": "@head"
+			"version": "^2.3.2"
 		}
     ]
 }
