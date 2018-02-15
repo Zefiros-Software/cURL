@@ -23,39 +23,16 @@
 --
 -- @endcond
 -- ]]
+if not os.isfile(path.join(zpm.exportpath(), "/include/curl/curlbuild.h")) then
+    zpm.extractfile("/include/curl/curlbuild.h.dist", "/include/curl/curlbuild.h")
+    --zpm.util.download( "https://curl.haxx.se/ca/cacert.pem", zpm.build._currentExportPath )
+end
 
-project "cURL"
-
-    kind "StaticLib"
-
-    zpm.uses {
-        "Zefiros-Software/mbedTLS"
-    }
-
-    files {
-        "lib/**.c"
-    }
-
-    includedirs { 
-        "lib"
-    }
-
-    zpm.export(function()
-        includedirs { 
-            "include"
-        }
-
-        defines { 
-            "BUILDING_LIBCURL",
-            "CURL_STATICLIB",
-            "HTTP_ONLY", 
-            "USE_MBEDTLS",
-            "CURL_HIDDEN_SYMBOLS",
-        }
-
-        filter {"system:not windows"}
-            defines "HAVE_CONFIG_H"
-        
-        filter {}
-
-    end)
+local targetConfig = path.join(zpm.exportpath(), "/lib/curl_config.h")
+if not os.isfile(targetConfig) then
+    if os.istarget("linux") then
+        os.copyfile(path.join(zpm.definition(), "/config/config-linux.h"), targetConfig)
+    elseif os.istarget("macosx") then
+        os.copyfile(path.join(zpm.definition(), "/config/config-osx.h"), targetConfig)
+    end
+end

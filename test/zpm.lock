@@ -1,0 +1,53 @@
+{
+  "definition": "./",
+  "optionals": [],
+  "private": {
+    "libraries": [ {
+      "definition": "../",
+      "hash": "691902790a5d53a9dadd4b6fb4253618d4fcf5d7",
+      "name": "Zefiros-Software/cURL",
+      "public": {
+        "libraries": [ {
+          "definition": "https://github.com/Zefiros-Software/mbedTLS.git",
+          "hash": "0485364a54d864d57b2ff0d992fe980ad8274eac",
+          "name": "Zefiros-Software/mbedTLS",
+          "repository": "https://github.com/ARMmbed/mbedtls.git",
+          "tag": "mbedtls-2.7.0",
+          "version": "2.7.0",
+          "versionRequirement": "^2.3.2"
+        } ]
+      },
+      "repository": "https://github.com/curl/curl.git",
+      "tag": "curl-7_58_0",
+      "version": "7_58_0",
+      "versionRequirement": "^7.50.0"
+    } ],
+    "modules": [ {
+      "definition": "https://github.com/Zefiros-Software/ZefirosDefaults.git",
+      "hash": "06075c936e348ee256cf5c05e449ce8d8f32054b",
+      "name": "Zefiros-Software/Defaults",
+      "public": {
+        "libraries": [ {
+          "definition": "https://github.com/Zefiros-Software/GoogleTest.git",
+          "hash": "a3ac2d7faa9cc6d38d69321f293925f72edf6727",
+          "name": "Zefiros-Software/GoogleTest",
+          "repository": "https://github.com/google/googletest.git",
+          "tag": "release-1.8.0",
+          "version": "1.8.0",
+          "versionRequirement": "@head || ^1.0.0"
+        }, {
+          "definition": "https://github.com/Zefiros-Software/GoogleBenchmark.git",
+          "hash": "37dbe80f9b190b263f6eb437e93b9c8fa4df2849",
+          "name": "Zefiros-Software/GoogleBenchmark",
+          "repository": "https://github.com/google/benchmark.git",
+          "tag": "HEAD",
+          "versionRequirement": "@head"
+        } ]
+      },
+      "repository": "https://github.com/Zefiros-Software/ZefirosDefaults.git",
+      "tag": "HEAD",
+      "versionRequirement": "@head"
+    } ]
+  },
+  "repository": "./"
+}
