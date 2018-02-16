@@ -26,5 +26,8 @@
 
 if os.istarget("linux") or os.istarget("macosx") then
     zpm.autoreconf()
-    zpm.configure()
+    zpm.configure("--without-zlib --without-brotli --without-winssl --without-darwinssl --without-ssl " ..
+                  "--without-gnutls --without-polarssl --with-mbedtls --without-cyassl --without-nss " ..
+                  "--without-axtls --without-libpsl --without-libmetalink --without-librtmp --without-winidn " .. 
+                  "--without-winidn --without-libidn2 --without-libidn2 --without-nghttp2 --without-nghttp2 --without-zsh --without-zsh")
 end
