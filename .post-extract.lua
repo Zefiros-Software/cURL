@@ -23,9 +23,8 @@
 --
 -- @endcond
 -- ]]
-if not os.isfile(path.join(zpm.exportpath(), "/include/curl/curlbuild.h")) then
+if not os.isfile(path.join(zpm.exportpath(), "/include/curl/curlbuild.h")) and os.isfile(path.join(zpm.repository(), "/include/curl/curlbuild.h")) then
     zpm.extractfile("/include/curl/curlbuild.h.dist", "/include/curl/curlbuild.h")
-    --zpm.util.download( "https://curl.haxx.se/ca/cacert.pem", zpm.build._currentExportPath )
 end
 
 local targetConfig = path.join(zpm.exportpath(), "/lib/curl_config.h")
