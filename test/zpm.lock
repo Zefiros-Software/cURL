@@ -29,11 +29,10 @@
       "public": {
         "libraries": [ {
           "definition": "https://github.com/Zefiros-Software/GoogleTest.git",
-          "hash": "a3ac2d7faa9cc6d38d69321f293925f72edf6727",
+          "hash": "3f0cf6b62ad1eb50d8736538363d3580dd640c3e",
           "name": "Zefiros-Software/GoogleTest",
           "repository": "https://github.com/google/googletest.git",
-          "tag": "release-1.8.0",
-          "version": "1.8.0",
+          "tag": "HEAD",
           "versionRequirement": "@head || ^1.0.0"
         }, {
           "definition": "https://github.com/Zefiros-Software/GoogleBenchmark.git",
