@@ -30,8 +30,8 @@ end
 local targetConfig = path.join(zpm.exportpath(), "/lib/curl_config.h")
 if not os.isfile(targetConfig) then
     if os.istarget("linux") then
-        os.copyfile(path.join(zpm.definition(), "/config/config-linux.h"), targetConfig)
+        zpm.extractfile("/config/config-linux.h", targetConfig, true)
     elseif os.istarget("macosx") then
-        os.copyfile(path.join(zpm.definition(), "/config/config-osx.h"), targetConfig)
+        zpm.extractfile("/config/config-osx.h", targetConfig, true)
     end
 end
