@@ -5,14 +5,14 @@ export: |
 
         kind "StaticLib"
 
-        zpm.uses "Zefiros-Software/mbedTLS"
-
         files "lib/**.c"
 
         includedirs "lib"
 
         zpm.export [[
             includedirs "include"
+
+            zpm.uses "Zefiros-Software/mbedTLS"
 
             defines { 
                 "BUILDING_LIBCURL",
