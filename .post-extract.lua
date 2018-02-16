@@ -23,15 +23,8 @@
 --
 -- @endcond
 -- ]]
-if not os.isfile(path.join(zpm.exportpath(), "/include/curl/curlbuild.h")) and os.isfile(path.join(zpm.repository(), "/include/curl/curlbuild.h")) then
-    zpm.extractfile("/include/curl/curlbuild.h.dist", "/include/curl/curlbuild.h")
-end
 
-local targetConfig = path.join(zpm.exportpath(), "/lib/curl_config.h")
-if not os.isfile(targetConfig) then
-    if os.istarget("linux") then
-        zpm.extractfile("/config/config-linux.h", "/lib/curl_config.h", true)
-    elseif os.istarget("macosx") then
-        zpm.extractfile("/config/config-osx.h", "/lib/curl_config.h", true)
-    end
+if os.istarget("linux") or os.istarget("macosx") then
+    zpm.autoreconf()
+    zpm.configure()
 end
