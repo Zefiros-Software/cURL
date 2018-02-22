@@ -1,4 +1,3 @@
-public:
-  libraries:
-    - name: Zefiros-Software/mbedTLS
-      version: ^2.3.2
+libraries:
+  - name: Zefiros-Software/mbedTLS
+    version: ^2.3.2
