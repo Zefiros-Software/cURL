@@ -8,11 +8,11 @@ export: |
         files "lib/**.c"
 
         includedirs "lib"
+    
+        zpm.uses "Zefiros-Software/mbedTLS"
 
         zpm.export [[
             includedirs "include"
-
-            zpm.uses "Zefiros-Software/mbedTLS"
 
             defines { 
                 "BUILDING_LIBCURL",
