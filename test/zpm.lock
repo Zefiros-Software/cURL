@@ -4,39 +4,40 @@
   "private": {
     "libraries": [ {
       "definition": "../",
-      "hash": "691902790a5d53a9dadd4b6fb4253618d4fcf5d7",
+      "hash": "99f79186a461ef664104ac930f395d020beb6681",
       "name": "Zefiros-Software/cURL",
-      "public": {
+      "private": {
         "libraries": [ {
           "definition": "https://github.com/Zefiros-Software/mbedTLS.git",
-          "hash": "0485364a54d864d57b2ff0d992fe980ad8274eac",
+          "hash": "6289efa3a2cb0ad86f2f59e1915cb7d13e699df3",
           "name": "Zefiros-Software/mbedTLS",
           "repository": "https://github.com/ARMmbed/mbedtls.git",
-          "tag": "mbedtls-2.7.0",
-          "version": "2.7.0",
+          "tag": "mbedtls-2.7.2",
+          "version": "2.7.2",
           "versionRequirement": "^2.3.2"
         } ]
       },
       "repository": "https://github.com/curl/curl.git",
-      "tag": "curl-7_58_0",
-      "version": "7_58_0",
+      "tag": "curl-7_56_1",
+      "version": "7_56_1",
       "versionRequirement": "^7.50.0"
     } ],
     "modules": [ {
       "definition": "https://github.com/Zefiros-Software/ZefirosDefaults.git",
-      "hash": "06075c936e348ee256cf5c05e449ce8d8f32054b",
+      "hash": "66cac4a6aa7f109e0fb8ce9daaac9f4330307b46",
       "name": "Zefiros-Software/Defaults",
       "public": {
         "libraries": [ {
           "definition": "https://github.com/Zefiros-Software/GoogleTest.git",
-          "hash": "3f0cf6b62ad1eb50d8736538363d3580dd640c3e",
+          "hash": "b4d333f14f977b3668de4e794d7d2e00b322d59a",
           "name": "Zefiros-Software/GoogleTest",
           "repository": "https://github.com/google/googletest.git",
-          "tag": "HEAD",
+          "tag": "release-1.4.0",
+          "version": "1.4.0",
           "versionRequirement": "@head || ^1.0.0"
         }, {
           "definition": "https://github.com/Zefiros-Software/GoogleBenchmark.git",
-          "hash": "6ecf8a8e80b92a7292558ae32466b4df331c851d",
+          "hash": "6d74c0625b8e88c1afce72b4f383c91b9a99dbe6",
           "name": "Zefiros-Software/GoogleBenchmark",
           "repository": "https://github.com/google/benchmark.git",
           "tag": "HEAD",
